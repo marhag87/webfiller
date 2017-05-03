@@ -68,7 +68,7 @@ class Webfiller(object):
             self.xdotool(
                 'type',
                 '--clearmodifiers',
-                config.username,
+                '"{}"'.format(config.username),
             )
             self.xdotool(
                 'key',
