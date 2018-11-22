@@ -36,3 +36,10 @@ class TestPasswordCleanup(TestCase):
             Webfiller().password_cleanup('aaaaa'),
             "'aaaaa'",
         )
+
+    def test_multiline_password(self):
+        """Test that multiline passwords only print the first line"""
+        self.assertEqual(
+            Webfiller().password_cleanup("aaaa\nbbbb\ncccc"),
+            "'aaaa'",
+        )

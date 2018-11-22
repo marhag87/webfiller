@@ -47,11 +47,12 @@ class Webfiller(object):
         title = str(self.xdotool('getactivewindow', 'getwindowname'))
         split_title = title.split(' - ')
         if split_title[-1] == 'Google Chrome':
-            return split_title[-2]
+            return split_title[0]
 
     @staticmethod
     def password_cleanup(password):
         """Output password in format xdotool can handle"""
+        password = password.splitlines()[0]
         split = password.split("'")
         joined = """'"'"'""".join(split)
         password = "'{}'".format(joined)

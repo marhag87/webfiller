@@ -9,7 +9,7 @@ class ConfigError(Exception):
 class Config(object):  # pylint: disable=too-few-public-methods
     """Class for handling config"""
     def __init__(self, url):
-        self.__config = load_config('config.yaml')
+        self.__config = load_config('/home/martin.hagstrom/.config/webfiller.yaml')
         try:
             conf = self.__config.get(url)
             self.username = conf.get('username')

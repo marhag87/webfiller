@@ -1,0 +1,8 @@
+Webfiller.egg-info/PKG-INFO
+Webfiller.egg-info/SOURCES.txt
+Webfiller.egg-info/dependency_links.txt
+Webfiller.egg-info/requires.txt
+Webfiller.egg-info/top_level.txt
+webfiller/__init__.py
+webfiller/config.py
+webfiller/webfiller.py
